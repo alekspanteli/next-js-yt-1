@@ -1,9 +1,10 @@
-function ProductList(){
+import Link from 'next/link';
+
+function ProductList({productId = 100}){
   return (
     <>
-      <h2>Product 1</h2>
-      <h2>Product 2</h2>
-      <h2>Product 3</h2>
+      <Link href="/product/1"><a>Product 1</a></Link>
+      <Link href={`/product/${productId}`} replace><a>Product 2</a></Link>
     </>
   )
 }
